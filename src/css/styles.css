@@ -18,3 +18,25 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  list-style: none;
+}
+
+.country-list li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.country-info h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.country-info p {
+  font-size: 20px;
+}
+
+.country-info span {
+  font-weight: bold;
+}
