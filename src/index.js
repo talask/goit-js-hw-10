@@ -22,8 +22,8 @@ inputSearch.addEventListener('input', debounce(() => {
       div.innerHTML = '';
       list.innerHTML = '';
      
-      if(data.length == 1){
-        
+      if(data.length === 1){
+       
         div.innerHTML = createFindCard(data[0]);
 
       }else if(data.length <= 10) {
@@ -38,8 +38,16 @@ inputSearch.addEventListener('input', debounce(() => {
     
       div.innerHTML = '';
       list.innerHTML = '';
-      Notiflix.Notify.failure('Oops, there is no country with that name');
-   
+      
+      if(error.message === "404") {
+        
+        Notiflix.Notify.failure('Oops, there is no country with that name');
+
+      }else {
+
+        console.log(error);
+
+      }
   });
 }
 }, DEBOUNCE_DELAY));
